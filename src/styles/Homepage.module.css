@@ -1,0 +1,18 @@
+.loan_model {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 2% 20%;
+}
+
+.second {
+    text-align: center;
+    margin: 2% 5%;
+}
+
+.loan {
+    font-size: 2rem;
+    color: black(224, 104, 104);
+    font-family: 'Noto Serif', serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}

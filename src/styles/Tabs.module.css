@@ -1,0 +1,14 @@
+.tabs {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    padding: 10px 100px !important;
+}
+
+.amit {
+    text-align: left;
+    padding: 20px;
+}

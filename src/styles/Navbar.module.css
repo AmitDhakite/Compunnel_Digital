@@ -1,0 +1,84 @@
+.banner {
+    width: 100%;
+  }
+  
+  .banner1 {
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.4), 0 10px 22px 0 rgba(0, 0, 0, 0.21);
+  }
+  
+  .bannerDiv {
+    text-align: center;
+    position: relative;
+  }
+  
+  .fullNav {
+    top: 0;
+  }
+  
+  .topNav {
+    margin-top: 20px;
+    margin-right: 100px;
+    position: absolute;
+    right: 0;
+    color: white;
+    top: 10px;
+    display: flex;
+  }
+  
+  .navTitles {
+    text-decoration: none;
+    margin: 3px 10px;
+    font-weight: 600;
+    padding: 5px 20px 5px 20px;
+    color: white;
+    font-size: 2rem;
+  }
+  
+  .navTitleDiv {
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+    transition-duration: 0.3s;
+  }
+
+  
+  .navTitles:hover {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    /* line-height: 1.5em; */
+    overflow: hidden;
+    max-height: 200px;
+    transition: max-height 1000ms ease-in;
+  }
+  
+  .navTitleDiv:hover {
+    text-decoration: none;
+    font-size: larger;
+    border-bottom-style: solid;
+    /* border-radius: 2px; */
+    background: rgba(23, 16, 16, 0.8);
+    cursor: pointer;
+  }  
+  .topHead {
+    animation: slide-down 1000ms ease-out forwards;
+    margin-top: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 2rem;
+    top: 0;
+    left: 90px;
+    position: absolute;
+  }
+
+  
+@keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(10rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
