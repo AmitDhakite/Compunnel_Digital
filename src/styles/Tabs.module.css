@@ -1,14 +1,48 @@
 .tabs {
-    padding: 30px 20px;
+    padding: 5px 20px;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+    background-color: #701e1c;
 }
 
 .item {
-    padding: 10px 100px !important;
+    padding-top: 10px !important;
+    color: white;
+    flex: 1;
+    background-color: #8b4241;
 }
 
 .amit {
     text-align: left;
-    padding: 20px;
+    min-height: 200px;
+    padding: 10px 30px 50px;
+    background-color: #8b4241;
+    font-family: 'Noto Serif', serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;    
+    color:#8b4241;
+    font-size: 1.25rem;
 }
+.amit .innerHead {
+    color: #361500;
+    /* font-family: 'Noto Serif', serif; */
+/* font-family: 'Quicksand', sans-serif; */
+/* font-family: 'Raleway', sans-serif; */
+/* font-family: 'Roboto', sans-serif; */
+font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+}
+
+.aditya {
+    min-height: 200px;
+}
+
+.harsh {
+    min-height: 200px;
+}
+

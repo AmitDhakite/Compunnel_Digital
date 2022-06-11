@@ -61,9 +61,9 @@
   }  
   .topHead {
     animation: slide-down 1000ms ease-out forwards;
-    margin-top: 30px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
+    margin-top: 30px;    
+    /* font-family: 'Roboto', sans-serif; */
+    font-weight: 200 !important;
     color: white;
     font-size: 2rem;
     top: 0;
