@@ -3,6 +3,7 @@ import Paper from '@mui/material/Paper';
 import classes from '../../styles/Navbar.module.css'
 import { Link } from "react-router-dom";
 import topBanner from '../../images/Banner.png'
+import Logo from '../../images/Logo.jpeg'
 
 const ResponsiveAppBar = () => {
   return (
@@ -11,7 +12,7 @@ const ResponsiveAppBar = () => {
       <div className={classes.bannerDiv}>
         <img className={classes.banner} src={topBanner}></img>
         <nav className={classes.fullNav}>
-          <p class={classes.topHead}>Compunnel Digital</p>
+          <img src={Logo} class={classes.topHead} />
           <div class={classes.topNav}>
            <div class={classes.navTitleDiv}>
                 Services
@@ -27,6 +28,11 @@ const ResponsiveAppBar = () => {
             </div>
           </div>
         </nav>        
+        <div className={classes.type}>
+            <div className={classes.inner}>
+              Unlocking Your Digital Vision...
+            </div>
+        </div>
       </div>
     </>
   );

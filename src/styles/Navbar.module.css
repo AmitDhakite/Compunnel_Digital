@@ -6,10 +6,7 @@
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.4), 0 10px 22px 0 rgba(0, 0, 0, 0.21);
   }
   
-  .bannerDiv {
-    text-align: center;
-    position: relative;
-  }
+  
   
   .fullNav {
     top: 0;
@@ -61,16 +58,54 @@
   }  
   .topHead {
     animation: slide-down 1000ms ease-out forwards;
-    margin-top: 30px;    
+    margin-top: 20px;    
     /* font-family: 'Roboto', sans-serif; */
-    font-weight: 200 !important;
-    color: white;
-    font-size: 2rem;
+    height: 70px;
     top: 0;
     left: 90px;
     position: absolute;
   }
 
+  .bannerDiv {
+    text-align: center;
+    position: relative;
+  }
+  
+  .type {
+    top: 250px;
+    left: 600px;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    color: white;
+    position: absolute;
+    height: 10vh;
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+  }
+  
+  .inner {
+    width: 25ch;
+    animation: typing 2s steps(32), blink .6s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 3.5rem;
+    font-weight: 100 !important;
+
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
   
 @keyframes slide-down {
     from {

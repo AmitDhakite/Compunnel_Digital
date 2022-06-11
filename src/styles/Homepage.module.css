@@ -7,7 +7,18 @@
 .second {
     text-align: center;
     /* margin: 2% 5%; */
-}
+    position: relative;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-delay: 2s;
+  }
+  
+  @keyframes example {
+    0%   {left:0px; top:0px;}
+    50%  {left:0; top:-100px;}
+    100% {left:0px; top:0px;}
+  }
+
 
 .loan {
     font-size: 2rem;
