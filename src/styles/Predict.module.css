@@ -1,0 +1,8 @@
+.table{
+    overflow-y: scroll;
+    max-height: 300px;
+    overflow-x: scroll;
+}
+.maindiv{
+    text-align: left;
+}

@@ -7,6 +7,7 @@ import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import classes from '../../styles/Tabs.module.css';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
+import Predict from "./Predict";
 
 const AntTabs = styled(Tabs)({
   borderBottom: '1px solid #e8e8e8',
@@ -78,7 +79,7 @@ export default function IconLabelTabs() {
     }
     {value === 1 && 
         <div className={classes.harsh}>
-            harsh
+            <Predict></Predict>
         </div>
     }
     {value === 2 &&
