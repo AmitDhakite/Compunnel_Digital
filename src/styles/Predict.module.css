@@ -3,6 +3,71 @@
     max-height: 300px;
     overflow-x: scroll;
 }
+.tableModal{
+    overflow-y: scroll;
+    max-height: 92%;
+    overflow-x: scroll;
+    text-align: center;
+    max-width:95%;
+}
 .maindiv{
     text-align: left;
+    padding-left:30px;
+    padding-right:30px ;
+    padding-bottom:20px;
+   
 }
+.div2{
+    background-color: #DDDDDD;
+    /* padding-top:5px; */
+    padding-left:10px;
+    padding-top:12px;
+    padding-bottom:12px;
+
+}
+
+
+.parent {
+   
+    /* margin: 1rem; */
+  
+   
+ 
+  }
+  .child {
+    display: inline-block;
+    padding: 5px 5px;
+    vertical-align: middle;
+  }
+  .formi{
+   padding-left:260px;
+   display: inline-block;
+  
+  }
+  .inp{
+    
+  }
+  .zoom{
+    display: inline-block;
+    width:10px;
+    padding-left: 37rem;
+  }
+  .zoomin{
+    display: inline-block;
+    padding-left: 79rem;
+    
+    
+  }
+  .cross{
+    display: inline-block;
+   padding-left:10px;
+   align:right;
+   vertical-align: middle;
+    
+  }
+  .predict{
+    text-align:center;
+    display: inline-block;
+    padding-left: 45%;
+    vertical-align: middle;
+  }

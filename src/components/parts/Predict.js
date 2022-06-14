@@ -1,6 +1,17 @@
 import React, { useState } from "react";
 import { CSVLink, CSVDownload } from "react-csv";
+import BasicModal from "./Modal";
 import classes from "../../styles/Predict.module.css";
+import CloudUploadIcon from "@mui/icons-material/CloudUpload";
+import StickyHeadTable from "./Table";
+import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
+import BasicButtons from "./Button";
+import { Button } from "@mui/material";
+
+import ZoomOutMapIcon from "@mui/icons-material/ZoomOutMap";
+import { textAlign } from "@mui/system";
+import ClearIcon from '@mui/icons-material/Clear';
+
 function Predict() {
   const [showTable, setShowTable] = useState(false);
   const [file, setFile] = useState();
@@ -16,6 +27,7 @@ function Predict() {
   const showName = (e) => {
     return <h2>{e.dataTransfer.file[0].name}</h2>;
   };
+ 
 
   const csvFileToArray = (string) => {
     const csvHeader = string.slice(0, string.indexOf("\n")).split(",");
@@ -51,16 +63,11 @@ function Predict() {
 
   return (
     <div className={classes.maindiv}>
-      <p>Upload Test File to predict</p>
-      <p>Choose a file</p>
+      <h3>Upload Test File to predict</h3>
+      
 
       <div
-        style={{
-          backgroundColor: "grey",
-        }}
-        className={`p-6 my-2 mx-auto max-w-md border-2 ${
-          highlighted ? "border-green-600 bg-green-100" : "border-gray-600"
-        }`}
+        className={classes.div2}
         onDragEnter={() => {
           setHighlighted(true);
         }}
@@ -81,61 +88,84 @@ function Predict() {
           setFile(e.dataTransfer.files[0]);
         }}
       >
-        <p>Drag and Drop File Here</p>
-        {file===null || file===undefined || file.length===0?<form style={{ textAlign: "right" }}>
-          <input
-            type={"file"}
-            id={"csvFileInput"}
-            accept={".csv"}
-            onChange={handleOnChange}
-          />
+        <div className={classes.child}>
+          <CloudUploadIcon></CloudUploadIcon>
+        </div>
 
+        <div className={classes.child}>
+          Drag and Drop File Here
           <br></br>
-        </form>
-        :<p>{file.name}</p>}
+          Limit 200MB per file
+        </div>
+
+        {file === null || file === undefined || file.length === 0 ? (
+          <form className={(classes.child, classes.formi)}>
+            <input
+              className={classes.inp}
+              type={"file"}
+              id={"csvFileInput"}
+              accept={".csv"}
+              onChange={handleOnChange}
+            />
+          </form>
+        ) : (
+          <div>
+            <InsertDriveFileIcon
+              className={classes.child}
+            ></InsertDriveFileIcon>
+            <p className={classes.child}>{file.name}</p>
+
+            <p className={classes.child}>{file.size} B</p>
+            <div className={classes.cross} >
+              <Button>
+              <ClearIcon sx={{ fontSize: 20 }}></ClearIcon>
+              </Button>
+              
+            </div>
+
+          </div>
+         
+        )}
       </div>
 
-      <div></div>
-      <button
+      <br></br>
+      <div
         onClick={(e) => {
           handleOnSubmit(e);
         }}
         style={{ textAlign: "left" }}
+        className={classes.child}
       >
-        Predict
-      </button>
+        <BasicButtons name="Predict"></BasicButtons>
+      </div>
+      {showTable && (
+       <div className={classes.zoom}>
+       <BasicModal array={array} headerKeys={headerKeys}></BasicModal>
+     </div>
+
+      )}
+      
+
       <br></br>
       <br></br>
+     
 
       {showTable && (
-        <div className={classes.table}>
-          <table>
-            <thead>
-              <tr key={"header"}>
-                {headerKeys.map((key) => (
-                  <th>{key}</th>
-                ))}
-              </tr>
-            </thead>
-
-            <tbody>
-              {array.map((item) => (
-                <tr key={item.id}>
-                  {Object.values(item).map((val) => (
-                    <td>{val}</td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div>
+          <div>
+            <StickyHeadTable
+              array={array}
+              headerKeys={headerKeys}
+            ></StickyHeadTable>
+          </div>
+          <br></br>
+          <div>
+            <CSVLink data={array}>
+              <BasicButtons name="Download data as CSV"></BasicButtons>
+            </CSVLink>
+          </div>
         </div>
       )}
-      <br></br>
-      <div>
-        <button>
-          <CSVLink data={array}>Download data as CSV</CSVLink>
-        </button>
-      </div>
     </div>
   );
 }
