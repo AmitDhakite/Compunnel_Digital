@@ -8,6 +8,7 @@ import classes from '../../styles/Tabs.module.css';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import Predict from "./Predict";
+import Graph from "./Graph";
 
 const AntTabs = styled(Tabs)({
   borderBottom: '1px solid #e8e8e8',
@@ -84,7 +85,7 @@ export default function IconLabelTabs() {
     }
     {value === 2 &&
         <div className={classes.aditya}>
-            aditya
+            <Graph></Graph>
         </div>
     }
     </>
