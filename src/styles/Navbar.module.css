@@ -60,7 +60,7 @@
     animation: slide-down 1000ms ease-out forwards;
     margin-top: 20px;    
     /* font-family: 'Roboto', sans-serif; */
-    height: 70px;
+    height: 100px;
     top: 0;
     left: 90px;
     position: absolute;
@@ -72,7 +72,7 @@
   }
   
   .type {
-    top: 250px;
+    top: 300px;
     left: 600px;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     color: white;

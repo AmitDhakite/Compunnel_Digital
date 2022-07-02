@@ -2,10 +2,10 @@
     padding: 5px 20px;
     display: flex;
     /* justify-content: space-between; */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     color: white;
-    background-color: #701e1c;
+    background-color: #192E47;
 }
 
 .item {

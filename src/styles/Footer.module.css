@@ -1,6 +1,5 @@
 .footer {
     /* width: auto; */
-    background-color: #414141;
     text-align: left;
     font-family: sans-serif;
     font-weight: bold;
@@ -11,6 +10,15 @@
     flex-direction: row;
   }
   
+  .footerPar{
+    position: relative;
+  }
+  .banner{
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+  }
+
   .footer .footer-left,
   .footer .footer-center,
   .footer .footer-right {
@@ -105,7 +113,7 @@
   
   .footer .footer-center p a {
     color: #0099ff;
-    text-decoration: none;
+    /* text-decoration: none; */
   }
   
   
@@ -135,7 +143,7 @@
   .footer .menu a {
     display: inline-block;
     line-height: 1.8;
-    text-decoration: none;
+    /* text-decoration: none; */
     color: inherit;
   }
   
@@ -165,4 +173,93 @@
     .footer .footer-center i {
       margin-left: 0;
     }
+  }
+  /* ////////////////////////////////////////////  */
+
+  .myfoot{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .col{
+    margin: 2% 5%;
+    color: rgb(160, 160, 160);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .col1{
+    margin: 0.5% 5%;
+    color: white;
+    min-width: 300px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  }
+
+  .col p{
+    line-height: 15px;
+    transition: all 0.3s ease-in-out;
+    transition-duration: 0.3s;
+    }
+  .sp
+  {
+      position: relative;
+      width: fit-content;
+  }
+
+  .sp:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;    
+    left: 0;
+    background-color: #FFF;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .sp:hover:before {
+    visibility: visible;
+    width: 100%;
+  }   
+  .sp:hover{
+    cursor: pointer;
+    color: white;
+  }
+  /* .col p:hover{
+    color: white;
+    cursor: pointer;
+    visibility: visible;
+    transform: scaleX(1);
+    text-decoration: underline;
+  } */
+
+  .icons{
+    animation-delay: 2000ms;
+    /* animation-duration: 2000ms; */
+    display: flex;
+  }
+
+  .icon{
+    margin: 2px 10px ;
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px 5px 1px 5px;
+  }
+
+  .icons :hover{
+    cursor: pointer;
+    border-color: #004e68;
+  }
+
+  .ska{
+    font-size: 4rem;
+  }
+
+  .fspan{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.755);
+  }
+
+  .shortHead{
+    color: white;
   }

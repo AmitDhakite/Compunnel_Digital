@@ -11,7 +11,7 @@ import Predict from "./Predict";
 import Graph from "./Graph";
 
 const AntTabs = styled(Tabs)({
-  borderBottom: '1px solid #e8e8e8',
+  borderBottom: '1px solid blue',
   '& .MuiTabs-indicator': {
     backgroundColor: 'white',
   },
@@ -30,7 +30,7 @@ const AntTab = styled((props) => <Tab disableRipple {...props} />)(({ theme }) =
   },
   fontWeight: theme.typography.fontWeightRegular,
   marginRight: theme.spacing(1),
-  color: '#ECB390',
+  color: '#d9d9d9',
   fontFamily: [
     '-apple-system',
     'BlinkMacSystemFont',
@@ -52,7 +52,7 @@ const AntTab = styled((props) => <Tab disableRipple {...props} />)(({ theme }) =
     fontWeight: theme.typography.fontWeightMedium,
   },
   '&.Mui-focusVisible': {
-    backgroundColor: '#701e1c',
+    backgroundColor: 'blue',
   },
 }));
 

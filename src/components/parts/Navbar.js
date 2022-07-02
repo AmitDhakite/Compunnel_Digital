@@ -3,7 +3,7 @@ import Paper from '@mui/material/Paper';
 import classes from '../../styles/Navbar.module.css'
 import { Link } from "react-router-dom";
 import topBanner from '../../images/Banner.png'
-import Logo from '../../images/Logo.jpeg'
+import Logo from '../../images/Logo.png'
 
 const ResponsiveAppBar = () => {
   return (

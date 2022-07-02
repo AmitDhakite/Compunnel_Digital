@@ -1,47 +1,64 @@
 import React from 'react';
 import classes from '../../styles/Footer.module.css';
-import Logo from '../../images/Logo.jpeg'
+import Logo from '../../images/Logo.png'
+import foot from '../../images/foot.png'
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GoogleIcon from '@mui/icons-material/Google';
 
 export default function App() {
   return (
     <>
-    <footer className={classes.footer}>
-    
-    <div style={{width:"33%"}} className={classes.footer_left}>
-    <p className={classes.about}>
-      <span> About the company</span> Ut congue augue non tellus bibendum, in varius tellus condimentum. In scelerisque nibh tortor, sed rhoncus odio condimentum in. Sed sed est ut sapien ultrices eleifend. Integer tellus est, vehicula eu lectus tincidunt,
-      ultricies feugiat leo. Suspendisse tellus elit, pharetra in hendrerit ut, aliquam quis augue. Nam ut nibh mollis, tristique ante sed, viverra massa.
-    </p>
-  </div>
-
-  <div className={classes.footer_center} style={{width:"33%", marginLeft: '50px', marginRight:'-20px'}} >
-    <div>
-      <i className={classes.fa}></i>
-      <p><span> Street name and number</span> City, Country</p>
-    </div>
-    <div>
-      <i className={classes.fa}></i>
-      <p> (+00) 0000 000 000</p>
-    </div>
-    <div>
-      <i className={classes.fa_envelope}></i>
-      <p><a href="#"> office@company.com</a></p>
-    </div>
-  </div>
-
-  <div className={classes.footer_right}>
-    <h2> Compunnel Digital<span> <img className={classes.logo} src={Logo} /></span></h2>
-    <p className={classes.menu}>
-      <a href="#"> Home</a> |
-      <a href="#"> About</a> |
-      <a href="#"> Services</a> |
-      <a href="#"> Portfolio</a> |
-      <a href="#"> News</a> |
-      <a href="#"> Contact</a>
-    </p>
-    <p className={classes.name}> Compunnel Digital &copy; 2022</p>
-  </div>
-</footer>
-    </>
+    <div className={classes.footerPar}>
+    <img className={classes.banner} src={foot}></img>
+        <div className={classes.myfoot}>
+          <div className={classes.col}>
+            <h2 className={classes.shortHead}>Company</h2>
+            <p className={classes.sp}>About Us</p>
+            <p className={classes.sp}>Who We Are</p>
+            <p className={classes.sp}>Core Values</p>
+            <p className={classes.sp}>Events & Webinars</p>
+            <p className={classes.sp}>Partners</p>
+          </div>
+          <div className={classes.col}>
+            <h2 className={classes.shortHead}>Services</h2>
+            <p className={classes.sp}>Analytics</p>
+            <p className={classes.sp}>Robotics Process</p>
+            <p className={classes.sp}>Automation</p>
+            <p className={classes.sp}>Applied Intelligence</p>
+            <p className={classes.sp}>All Services</p>
+          </div>
+          <div className={classes.col}>
+            <h2 className={classes.shortHead}>Products</h2>
+            <p className={classes.sp}>Analytics</p>
+            <p className={classes.sp}>Robotics Process</p>
+            <p className={classes.sp}>Automation</p>
+            <p className={classes.sp}>Applied Intelligence</p>
+            <p className={classes.sp}>All Services</p>
+          </div>
+          <div className={classes.col1}>
+          <h1><span className={classes.ska}> SKA </span> Analytics<span> <img className={classes.logo} src={Logo} /></span></h1>
+          <div>
+       <i className={classes.fa}></i>
+       <p><span>13th Street. 47 W 13th St, </span>New York, USA</p>
+     </div>
+            <h3 style={{color:"white"}}>Connect</h3>
+            <div className={classes.icons}>              
+            <div className={classes.icon}><FacebookIcon /></div>
+            <div className={classes.icon}><LinkedInIcon /></div>
+            <div className={classes.icon}><GoogleIcon /></div>
+            <div className={classes.icon}><TwitterIcon /></div>
+            <div className={classes.icon}><InstagramIcon /></div>
+            </div>
+          </div>
+          <div className={classes.col}>          
+          </div>
+        </div>
+        <div className={classes.fspan}>
+        <span>2022 © SKA Analytics 2022. All rights reserved.</span>
+    </div>  </div> </>
   );
-}
+  }
