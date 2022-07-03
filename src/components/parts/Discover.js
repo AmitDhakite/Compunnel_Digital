@@ -8,7 +8,7 @@ import g2 from "../../images/g2.jpg";
 export default function MidBanner() {
 
     useEffect(()=>{
-        Aos.init({duration: 2000});
+        Aos.init({duration: 4000});
     },[]);
     return (
     <div className={classes.outer}>
